@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+Last updated at {{ site.time }}.
