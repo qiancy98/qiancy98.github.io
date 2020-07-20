@@ -6,3 +6,5 @@ layout: home
 ---
 
 Last updated at {{ site.time }}.
+
+如有任何想法，欢迎[提交Issue](https://github.com/qiancy98/qiancy98.github.io/issues)！
