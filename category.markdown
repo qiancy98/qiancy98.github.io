@@ -5,28 +5,28 @@ permalink: /Category/
 ---
 
 {% for sec in site.data.list_of_category.section %}
-- {{sec}}
-  {%- for sub in site.data.list_of_category.mapping[sec] %}
-  - {{sub}}
-    {%- for ssub in site.data.list_of_category.mapping[sub] %}
-    - {{ssub}}
-      {%- for page in site.categories[ssub] %}
-      - [{{page.title}}]({{ page.url }}) `{{page.date | slice:0,10}}`
-      {%- else %}
+- {{ site.data.list_of_category.alias[sec] | default: sec }}
+    {%- for sub in site.data.list_of_category.mapping[sec] %}
+  - {{ site.data.list_of_category.alias[sub] | default: sub }}
+        {%- for ssub in site.data.list_of_category.mapping[sub] %}
+    - {{ site.data.list_of_category.alias[ssub] | default: ssub }}
+            {%- for page in site.categories[ssub] %}
+      - `{{page.date | date: "%Y-%m-%d"}}` [{{page.title}}]({{ page.url }})
+            {%- else %}
         (此目录暂无博客。)
-      {%- endfor %}
-    {%- else %}
-      {%- for page in site.categories[sub] %}
-      - [{{page.title}}]({{ page.url }}) `{{page.date | slice:0,10}}`
-      {%- else %}
-        (此目录暂无博客。)
-      {%- endfor %}
-    {%- endfor %}
-  {%- else %}
-    {%- for page in site.categories[sec] %}
-    - [{{page.title}}]({{ page.url }}) `{{page.date | slice:0,10}}`
-    {%- else %}
+            {%- endfor %}
+        {%- else %}
+            {%- for page in site.categories[sub] %}
+    - `{{page.date | date: "%Y-%m-%d"}}` [{{page.title}}]({{ page.url }})
+            {%- else %}
       (此目录暂无博客。)
+            {%- endfor %}
+        {%- endfor %}
+    {%- else %}
+        {%- for page in site.categories[sec] %}
+  - `{{page.date | date: "%Y-%m-%d"}}` [{{page.title}}]({{ page.url }})
+        {%- else %}
+    (此目录暂无博客。)
+        {%- endfor %}
     {%- endfor %}
-  {%- endfor %}
 {%- endfor %}

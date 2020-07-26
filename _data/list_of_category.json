@@ -1,6 +1,13 @@
 {
-	"section": ["Programming","jekyll"],
+	"section": [
+		"编程相关",
+		"jekyll"
+	],
 	"mapping": {
-		"Programming": ["LaTeX","Git","Programming-others"]
+		"编程相关": ["LaTeX","Git","Programming-others"]
+	},
+	"alias": {
+		"Programming-others": "其他",
+		"jekyll": "jekyll欢迎页"
 	}
 }
