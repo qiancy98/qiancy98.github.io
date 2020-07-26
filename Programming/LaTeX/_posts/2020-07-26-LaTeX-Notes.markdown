@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "给新手的LaTeX小技巧"
+title:  "给新手的LaTeX小技巧（导言区篇）"
 ---
 
 目录：
@@ -13,15 +13,15 @@ title:  "给新手的LaTeX小技巧"
 - 可以使用宏包`cleveref`，调用命令为`\Cref`和`\cref`，可以自动填充引用对象（比如可以显示`Theorem 1.1`而非`1.1`）。
 - 可以使用如下命令来使`cleveref`总是使用首字母大写格式：
 
-    ```LaTeX
-    \usepackage[capitalize]{cleveref}
-    ```
+  ```LaTeX
+  \usepackage[capitalize]{cleveref}
+  ```
 
 - 宏包`showkeys`用来在引用对象附近注明引用标签。`notref`选项用来关闭在`\ref`，`\Cref`等命令附近的标签。`final`模式下宏包`showkeys`自动被禁用。宏包用法如下：
 
-    ```LaTeX
-    \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
-    ```
+  ```LaTeX
+  \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
+  ```
 
 - 这条没有考证：据说`hyperref`要在`cleveref`前导入。
 - 我们使用`~`来输出不能断行的空格。一般引用中的页码“p. 123”或者“引理 1.1”中间的空格不断行，因此建议使用命令`p.~123`和`引理~1.1`。
@@ -30,9 +30,9 @@ title:  "给新手的LaTeX小技巧"
 
 - 选项`scheme=plain`用来在支持中文的同时不改变文档原格式（比如显示“Section”而非“节”，首页显示英文日期而非中文日期，等等）。用法：
 
-    ```LaTeX
-    \usepackage[scheme=plain]{ctex}
-    ```
+  ```LaTeX
+  \usepackage[scheme=plain]{ctex}
+  ```
 
 ## 草稿模式
 
@@ -43,28 +43,28 @@ title:  "给新手的LaTeX小技巧"
 
 - 如下命令可以禁用底部页码。
 
-    ```LaTeX
-    \pagestyle{plain}
-    ```
+  ```LaTeX
+  \pagestyle{plain}
+  ```
 
 ### 改变页边距
 
 - 使用宏包的方法：
 
-    ```LaTeX
-    \usepackage{geometry}
-    \geometry{a4paper,scale=0.8}
-    ```
+  ```LaTeX
+  \usepackage{geometry}
+  \geometry{a4paper,scale=0.8}
+  ```
 
 - 不使用宏包的方法：
 
-    ```LaTeX
-    \addtolength{\oddsidemargin}{-.875in}
-    \addtolength{\evensidemargin}{-.875in}
-    \addtolength{\textwidth}{1.75in}
-    \addtolength{\topmargin}{-.875in}
-    \addtolength{\textheight}{1.75in}
-    ```
+  ```LaTeX
+  \addtolength{\oddsidemargin}{-.875in}
+  \addtolength{\evensidemargin}{-.875in}
+  \addtolength{\textwidth}{1.75in}
+  \addtolength{\topmargin}{-.875in}
+  \addtolength{\textheight}{1.75in}
+  ```
 
 - 当时寻找下面一种不使用宏包的方法，是因为机械硬盘下宏包`geometry`导入似乎很慢。固态硬盘下看起来问题不大。（别问我为什么编译依然这么慢，我不知道。）
 
@@ -97,7 +97,7 @@ title:  "给新手的LaTeX小技巧"
 
 % Fonts
 % \usepackage{mathrsfs} % 花体 \mathscr
-% \usepackage{bbm}      % 空心体 \mathbbm
+% \usepackage{bbm}    % 空心体 \mathbbm
 % \usepackage{dsfont}   % 空心体 \mathds
 
 % Other packages
