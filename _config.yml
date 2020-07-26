@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: QianCY's Blog   钱程阳的博客
+title: 钱程阳的博客 QianCY's Blog
 email: q-young@qq.com or mike98@sjtu.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   这里是钱程阳的个人小屋喵~ 欢迎常踩w 
