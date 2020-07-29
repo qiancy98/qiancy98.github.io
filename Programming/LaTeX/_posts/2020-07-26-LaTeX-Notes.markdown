@@ -106,7 +106,7 @@ title:  "给新手的LaTeX小技巧（导言区篇）"
 % \usepackage[scheme=plain]{ctex}
 
 % New commands
-\newcommand{\eqgap}{\,\phantom{=}\,} % 在align环境中对齐使用
+\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用
 
 % Environments
 \theoremstyle{plain}
