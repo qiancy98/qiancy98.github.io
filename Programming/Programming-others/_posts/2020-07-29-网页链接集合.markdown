@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "LaTeX预编译技术"
+---
+
+目录：
+
+- （此行不会显示）
+{:toc}
+
+## Mathematica
+
+- [Mathematica激活指南](https://tiebamma.github.io/InstallTutorial/) 正版和盗版的激活指南都有。
+- [正版Mathematica淘宝店](https://item.taobao.com/item.htm?id=607126029158)
+- [官方中文帮助、教程等等](https://reference.wolfram.com/)

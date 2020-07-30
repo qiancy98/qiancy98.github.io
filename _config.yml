@@ -55,3 +55,4 @@ exclude:
   - LICENSE
   - makefile
   - Readme.md
+  - .vscode/
