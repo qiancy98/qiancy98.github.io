@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "LaTeX预编译技术"
+title:  "网页链接集合"
 ---
 
 目录：
