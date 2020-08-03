@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "LaTeX参考文献管理"
+---
+
+目录：
+
+- （此行不会显示）
+{:toc}
+
+## 常用格式
+
+1. plain，按字母的顺序排列，比较次序为作者、年度和标题；
+2. unsrt，样式同plain，只是按照引用的先后排序；
+3. alpha，用作者名首字母+年份后两位作标号，以字母顺序排序；
+4. abbrv，类似plain，将月份全拼改为缩写，更显紧凑；
+5. ieeetr，国际电气电子工程师协会期刊样式；
+6. acm，美国计算机学会期刊样式；
+7. siam，美国工业和应用数学学会期刊样式；
+8. apalike，美国心理学学会期刊样式；
+
+引用自[Latex引用参考文献-BibTex的使用](https://blog.csdn.net/caiandyong/article/details/70258670).
