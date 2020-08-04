@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "TiKZ代码示例"
+---
+
+目录：
+
+- （此行不会显示）
+{:toc}
+
+这是我很喜欢的LaTeX代码例子:
+
+```LaTeX
+\begin{tikzpicture}[scale=4]
+    \newcommand{\point}% {\x\y\z}
+        {\footnotesize{$\{x \ifodd \x +1 \fi, y \ifodd \y +1 \fi,z \ifodd \z +1 \fi \}$}}
+    \foreach \x in {0,1}
+        \foreach \y in {0,1}
+            \foreach \z in {0,1}
+                \path[draw]
+                   ($\x*(1,0)+\y*(0,1)+\z*(0.4,0.2)$)
+                        node[label=90:\point] (\x\y\z) {}
+                        circle (1pt);
+    \path[draw]
+        (2,1.0)
+            node (positive) [label=0:$+ A$] {}
+            circle (1pt)
+        (2,0.5)
+            node (negative) [label=0:$- A$] {}
+            circle (1pt);
+    \foreach \x in {0,1}
+        \foreach \y in {0,1}
+            \path[draw]
+                (\x\y0) -- (\x\y1)
+                (\x0\y) -- (\x1\y)
+                (0\x\y) -- (1\x\y);
+    \foreach \x in {000,011,101,110,positive}
+        \path[fill]
+            (\x) circle (1pt);
+\end{tikzpicture}
+```

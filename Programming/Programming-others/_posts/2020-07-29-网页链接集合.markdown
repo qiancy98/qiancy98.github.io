@@ -19,6 +19,7 @@ date:   2020-07-31 21:58:00 +0800
 
 - [latexstudio LaTeX编辑部](https://www.latexstudio.net/hulatex/index.htm)
   这里有简介 教程 常用宏包介绍实用模板 各种资料 常用网站 等等
+- [Tikz中文手册](http://static.latexstudio.net/article/2019/0621/ManualNotes-0620.pdf)
 - [使用Python写latex:pylatex的简单使用](https://blog.csdn.net/sailist/article/details/86708673)
   在Python中写LaTeX语言
 - [在latex中写python代码](https://blog.csdn.net/u011982340/article/details/40479549)
