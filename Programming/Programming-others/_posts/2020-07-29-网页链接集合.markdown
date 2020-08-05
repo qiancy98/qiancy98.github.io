@@ -17,10 +17,20 @@ date:   2020-07-31 21:58:00 +0800
 
 ## LaTeX
 
-- [latexstudio LaTeX编辑部](https://www.latexstudio.net/hulatex/index.htm)
-  这里有简介 教程 常用宏包介绍实用模板 各种资料 常用网站 等等
-- [Tikz中文手册](http://static.latexstudio.net/article/2019/0621/ManualNotes-0620.pdf)
-- [使用Python写latex:pylatex的简单使用](https://blog.csdn.net/sailist/article/details/86708673)
-  在Python中写LaTeX语言
-- [在latex中写python代码](https://blog.csdn.net/u011982340/article/details/40479549)
-  在LaTeX中使用Python程序, 并插入运行结果
+- 新手教程
+  - [Dickimaw LaTeX series, volume 1. LaTeX for Complete Novices](https://www.dickimaw-books.com/booklist.php?book_id=13)
+  - [Dickimaw LaTeX series, volume 2. Using LaTeX to Write a PhD Thesis](https://www.dickimaw-books.com/booklist.php?book_id=16)
+  - [Dickimaw LaTeX series, volume 3. LaTeX for Administrative Work](https://www.dickimaw-books.com/booklist.php?book_id=8)
+  - [CTeX-org/lshort-zh-cn](https://github.com/CTeX-org/lshort-zh-cn) 一份不太简短的LaTeX介绍
+  - [wklchris/Note-by-LaTeX](https://github.com/wklchris/Note-by-LaTeX) LaTeX学习笔记
+  - [latexstudio LaTeX编辑部](https://www.latexstudio.net/hulatex/index.htm)
+    这里有简介 教程 常用宏包介绍实用模板 各种资料 常用网站 等等
+  - [TeX FAQ](http://www.texfaq.org/) LaTeX常见问题列表
+- 宏包介绍
+  - [Tikz中文手册](http://static.latexstudio.net/article/2019/0621/ManualNotes-0620.pdf)
+  - [使用Python写latex:pylatex的简单使用](https://blog.csdn.net/sailist/article/details/86708673)
+    在Python中写LaTeX语言
+  - [在latex中写python代码](https://blog.csdn.net/u011982340/article/details/40479549)
+    在LaTeX中使用Python程序, 并插入运行结果
+- 模板
+  - [yernhi/collection-latex-templates](https://github.com/yernhi/collection-latex-templates) 高校LaTeX模板
