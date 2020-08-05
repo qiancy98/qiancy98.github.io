@@ -68,6 +68,56 @@ title:  "给新手的LaTeX小技巧（导言区篇）"
 
 - 当时寻找下面一种不使用宏包的方法，是因为机械硬盘下宏包`geometry`导入似乎很慢。固态硬盘下看起来问题不大。（别问我为什么编译依然这么慢，我不知道。）
 
+## 字体选择
+
+### 字体简介
+
+LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维度只能选择一种字体, 不同维度的字体可以任意组合.
+
+- family字体族: `\rmfamily`, `\sffamify`, `\ttfamily`.
+- series字体族: `\mdseries`, `\bfseries`, `\lfseries`.
+- shape 字体族: `\upshape`, `\itshape`, `\slshape`, `\scshape`.
+
+这些命令的含义请参见[wikibook](https://en.wikibooks.org/wiki/LaTeX/Fonts#Font_styles). 这些命令的作用域是自命令位置起的全局, 有时候我们只需要使其作用于部分位置, 当如下使用:
+
+```LaTeX
+{\rmfamily This is sample text.}
+```
+
+或者, 取首两个字母, 前缀`text`或`math`构成单参数命令, 使被作用参数变成指定字体, 形如`\textrm{some text here}`或`\mathit{some text here}`. 如只需采用默认字体, 亦可单使用`\text{some text here}`或`\textnormal{some text here}`.
+
+### 字体大小
+
+字体从小到大依次为:
+
+- `\tiny`
+- `\scriptsize`
+- `\footnotesize`
+- `\small`
+- `\normalsize`
+- `\large`
+- `\Large`
+- `\LARGE`
+- `\huge`
+- `\Huge`
+
+使用方式为 (以下二者效果相同):
+
+- ```LaTeX
+  {\large abcd}
+  ```
+
+- ```LaTeX
+  \begin{large}
+      abcd
+  \end{large}
+  ```
+
+### 参考字体
+
+在选择合适字体时, 如下图片可供参考:
+![字体选择参考](/assets/img/LaTeX/fonts choosing.png "字体选择参考")
+
 ## 我的导言区代码
 
 附上我的导言区文件：

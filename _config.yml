@@ -28,6 +28,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: QianCY98
 github_username:  QianCY98
 
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
 # Build settings
 theme: minima
 plugins:
