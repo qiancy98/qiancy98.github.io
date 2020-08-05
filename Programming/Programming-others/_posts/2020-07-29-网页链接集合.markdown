@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "网页链接集合"
-date:   2020-07-31 21:58:00 +0800
+date:   2020-08-05 17:05:00 +0800
 ---
 
 目录：
@@ -23,9 +23,10 @@ date:   2020-07-31 21:58:00 +0800
   - [Dickimaw LaTeX series, volume 3. LaTeX for Administrative Work](https://www.dickimaw-books.com/booklist.php?book_id=8)
   - [CTeX-org/lshort-zh-cn](https://github.com/CTeX-org/lshort-zh-cn) 一份不太简短的LaTeX介绍
   - [wklchris/Note-by-LaTeX](https://github.com/wklchris/Note-by-LaTeX) LaTeX学习笔记
+  - [LaTeX - wikibooks](https://en.wikibooks.org/wiki/LaTeX)
   - [latexstudio LaTeX编辑部](https://www.latexstudio.net/hulatex/index.htm)
     这里有简介 教程 常用宏包介绍实用模板 各种资料 常用网站 等等
-  - [TeX FAQ](http://www.texfaq.org/) LaTeX常见问题列表
+  - 我初学时使用的书籍为以上链接中的[LaTeX for Complete Novices](https://www.dickimaw-books.com/booklist.php?book_id=13), [一份不太简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn), [LaTeX - wikibooks](https://en.wikibooks.org/wiki/LaTeX).
 - 宏包介绍
   - [Tikz中文手册](http://static.latexstudio.net/article/2019/0621/ManualNotes-0620.pdf)
   - [使用Python写latex:pylatex的简单使用](https://blog.csdn.net/sailist/article/details/86708673)
@@ -34,3 +35,14 @@ date:   2020-07-31 21:58:00 +0800
     在LaTeX中使用Python程序, 并插入运行结果
 - 模板
   - [yernhi/collection-latex-templates](https://github.com/yernhi/collection-latex-templates) 高校LaTeX模板
+- 编译器选择:
+  - [MiKTeX下载链接](https://miktex.org/download#all) 一般而言, 安装基本版就足够使用了, 其余包会在需要使用时下载.
+  - [Latex编译（Miktex与texlive异同）](https://zhuanlan.zhihu.com/p/104464775)
+- 遇到问题?
+  - [TeX FAQ](http://www.texfaq.org/) LaTeX常见问题列表
+  - 试试[Google](https://www.google.com.hk/)!
+  - 试试[StackExchange](https://tex.stackexchange.com/)!
+
+## Git
+
+[Git教程(中文)](https://git-scm.com/book/zh/v2)
