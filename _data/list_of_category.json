@@ -1,13 +1,14 @@
 {
 	"section": [
 		"编程相关",
-		"jekyll"
+		"学生身份相关",
 	],
 	"mapping": {
-		"编程相关": ["LaTeX","Git","Programming-others"]
+		"编程相关": ["LaTeX","Programming-others"],
+		"学生身份相关": ["Assistant"],
 	},
 	"alias": {
 		"Programming-others": "其他",
-		"jekyll": "jekyll欢迎页"
+		"Assistant": "助教工作",
 	}
 }
