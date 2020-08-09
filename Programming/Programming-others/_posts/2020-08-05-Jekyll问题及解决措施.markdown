@@ -76,7 +76,7 @@ cp /var/lib/gems/2.7.0/gems/minima-2.5.1/_includes/head.html ./_includes/head.ht
 </script>
 ```
 
-我还在`_config.yaml`中增加了如下段落（未验证其作用，仅为方便读着复现本节效果）：
+我还在`_config.yaml`中增加了如下段落（未验证其作用，仅为方便读者复现本节效果）：
 
 ```yaml
 markdown: kramdown
