@@ -2,6 +2,7 @@
 	"section": [
 		"编程相关",
 		"学生身份相关",
+		"others",
 	],
 	"mapping": {
 		"编程相关": ["LaTeX","Programming-others"],
@@ -10,5 +11,6 @@
 	"alias": {
 		"Programming-others": "其他",
 		"Assistant": "助教工作",
+		"others": "其他",
 	}
 }

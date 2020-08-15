@@ -42,6 +42,28 @@ date:   2020-08-05 17:05:00 +0800
   - [TeX FAQ](http://www.texfaq.org/) LaTeX常见问题列表
   - 试试[Google](https://www.google.com.hk/)!
   - 试试[StackExchange](https://tex.stackexchange.com/)!
+- 参考文献
+  - [bib管理参考文献](https://haoyu.love/blog431.html)
+  - [Latex引用参考文献-BibTex的使用](https://blog.csdn.net/caiandyong/article/details/70258670)
+    > 常用格式
+    >
+    > 1. plain，按字母的顺序排列，比较次序为作者、年度和标题；
+    > 2. unsrt，样式同plain，只是按照引用的先后排序；
+    > 3. alpha，用作者名首字母+年份后两位作标号，以字母顺序排序；
+    > 4. abbrv，类似plain，将月份全拼改为缩写，更显紧凑；
+    > 5. ieeetr，国际电气电子工程师协会期刊样式；
+    > 6. acm，美国计算机学会期刊样式；
+    > 7. siam，美国工业和应用数学学会期刊样式；
+    > 8. apalike，美国心理学学会期刊样式；
+    >
+  - [在 Beamer 中使用参考文献 - 水阙](https://guyueshui.github.io/post/use-reference-in-beamer/)
+  - [Beamer使用参考文献作为脚注 - CSDN](https://blog.csdn.net/nima1994/article/details/80744545)
+  - [Beamer参考文献使用数字标号 - CSDN](https://blog.csdn.net/nima1994/article/details/80762517)
+  - [Beamer中使用参考文献 - WikiBooks (en)](https://en.wikibooks.org/wiki/LaTeX/Presentations#References_(Beamer))
+    > 可以使用`\begin{frame}[allowframebreaks]`来自动分页.
+- 与Wolfram协同
+  - [如何高效地联合使用 Mathematica 和 LaTeX？ - 知乎](https://www.zhihu.com/question/23207757)
+  - [用 Wolfram 语言生成 TeX - Wolfram 语言与系统参考资料中心](https://reference.wolfram.com/language/workflow/GenerateTeXWithTheWolframLanguage.html.zh?source=footer)
 
 ## Git
 

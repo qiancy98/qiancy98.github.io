@@ -124,7 +124,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 ```LaTeX
 \documentclass[a4paper,10pt]{article}
-% \pagestyle{plain} % 文档样式. empty则底部不放置页码.
+% \pagestyle{plain} % 文档样式; empty则底部不放置页码.
 
 % Basic Packages
 \usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools}
