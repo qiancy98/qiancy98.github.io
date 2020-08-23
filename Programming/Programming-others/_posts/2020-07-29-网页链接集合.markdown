@@ -69,3 +69,13 @@ date:   2020-08-05 17:05:00 +0800
 
 - [Git教程(中文)](https://git-scm.com/book/zh/v2)
 - [Git处理行末回车](https://docs.github.com/cn/github/using-git/configuring-git-to-handle-line-endings)
+
+## Vim
+
+- [Vim 配置入门](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)
+
+## 暂时还没有另外分页的链接
+
+### 如何写好论文
+
+- [【法国数学家Serre哈佛讲座】如何糟糕地写数学？](https://www.bilibili.com/video/BV19K411W7pN/) 已笑cry并改掉了我论文中被提到的用法.

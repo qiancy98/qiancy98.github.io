@@ -1,5 +1,8 @@
 {
 	"cSpell.words": [
 		"mathematica"
+	],
+	"cSpell.enableFiletypes": [
+		"!markdown"
 	]
 }
