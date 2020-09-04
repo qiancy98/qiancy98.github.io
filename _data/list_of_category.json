@@ -6,11 +6,12 @@
 	],
 	"mapping": {
 		"编程相关": ["LaTeX","Programming-others"],
-		"学生身份相关": ["Assistant"],
+		"学生身份相关": ["Assistant","Papers"],
 	},
 	"alias": {
 		"Programming-others": "其他",
 		"Assistant": "助教工作",
 		"others": "其他",
+		"Papers": "论文相关",
 	}
 }
