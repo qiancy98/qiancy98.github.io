@@ -168,6 +168,8 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \newtheorem{example}[theorem]{Example}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\crefname{conjecture}{conjecture}{conjectures}
 
 % Change margin
 \usepackage{geometry}
