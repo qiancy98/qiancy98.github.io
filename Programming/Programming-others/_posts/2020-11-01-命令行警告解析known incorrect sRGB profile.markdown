@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "命令行：“libpng warning: iCCP: known incorrect sRGB profile”问题解析"
+title: "[摘抄] 命令行：“libpng warning: iCCP: known incorrect sRGB profile”问题解析"
 ---
 
 我之前在命令行中数次看到如下报错：
