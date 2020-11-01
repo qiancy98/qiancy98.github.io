@@ -134,9 +134,11 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usepackage[capitalize]{cleveref}
 \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
 \usepackage{url}
-\newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
-\newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
-\newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
+
+% Copyed from my advisor's preamable template. % 我并不知道其效果。
+% \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+% \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
+% \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
 
 % Graph
 \usepackage{tikz}
@@ -153,7 +155,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
 \usepackage[toc,pages]{appendix} % 支持附录
-% \usepackage[scheme=plain]{ctex}
+% \usepackage[scheme=plain]{ctex} % 支持中文
 
 % New commands
 \newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用
