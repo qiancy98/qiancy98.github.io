@@ -135,7 +135,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
 \usepackage{url}
 
-% Copyed from my advisor's preamable template. % 我并不知道其效果。
+% 从我导师的preamable template中传承的. % 我并不知道其效果。
 % \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
 % \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
@@ -144,21 +144,22 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
-% \usepackage{graphicx}
+% \usepackage{graphicx}   % 支持插入图片
 % \usepackage{subcaption} % 支持子图
 
 % Fonts
 % \usepackage{mathrsfs} % 花体 \mathscr
-% \usepackage{bbm}    % 空心体 \mathbbm
+% \usepackage{bbm}      % 空心体 \mathbbm
 % \usepackage{dsfont}   % 空心体 \mathds
 
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
+% \usepackage{etoolbox} % 提供各种钩子
 \usepackage[toc,pages]{appendix} % 支持附录
 % \usepackage[scheme=plain]{ctex} % 支持中文
 
 % New commands
-\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用
+\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
 
 % Environments
 \theoremstyle{plain}
@@ -171,7 +172,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{conjecture}[theorem]{Conjecture}
-\crefname{conjecture}{conjecture}{conjectures}
+\crefname{conjecture}{conjecture}{conjectures} % 告诉cleveref如何引用conjecture环境
 
 % Change margin
 \usepackage{geometry}
