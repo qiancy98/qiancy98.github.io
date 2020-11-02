@@ -154,9 +154,20 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
-% \usepackage{etoolbox} % 提供各种钩子
 \usepackage[toc,pages]{appendix} % 支持附录
 % \usepackage[scheme=plain]{ctex} % 支持中文
+
+% % 定义在draft模式下的额外行为
+% % ref: https://tex.stackexchange.com/questions/21234/doing-something-only-when-the-draft-option-is-on
+% \makeatletter
+% \def\ifdraft{\ifdim\overfullrule>\z@
+%   \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+% \makeatother
+%
+% \usepackage{etoolbox} % 提供各种钩子。本导言区中用到的是\pretocmd。
+%
+% % 如果在草稿模式下，那么每节前分页，以节省打印纸张。
+% \ifdraft{\pretocmd{\section}{\clearpage}{}{}}{}
 
 % New commands
 \newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
