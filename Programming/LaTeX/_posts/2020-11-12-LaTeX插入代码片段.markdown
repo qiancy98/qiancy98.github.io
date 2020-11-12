@@ -15,6 +15,8 @@ title:  "给新手的LaTeX小技巧（插入代码）"
 
 补充一个细节：mathematica宏包里，`@`和`_`都是运算符，所以需要额外补充一行，这我在全网都没有找到相关资料（除了`lstlisting`的文档，但是文档里也埋得很深）。（你现在找得到了，没错那是我放上去的。）
 
+以下是我写的LaTeX格式。`mma`格式用来替代原先的`mathematica`语言，`text`格式可以放置普通文本。
+
 ```latex
 \lstdefinestyle{mma}{
     % backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
