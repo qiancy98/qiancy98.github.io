@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "给新手的LaTeX小技巧（插入代码）"
+---
+
+目录：
+
+- （此行不会显示）
+{:toc}
+
+我选用`lstlisting`宏包以插入代码。
+大多数内容维基上都有。
+
+> 传送门：[LaTeX/Source Code Listings - Wikibook](https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings)
+
+补充一个细节：mathematica宏包里，`@`和`_`都是运算符，所以需要额外补充一行，这我在全网都没有找到相关资料（除了`lstlisting`的文档，但是文档里也埋得很深）。（你现在找得到了，没错那是我放上去的。）
+
+```latex
+\lstdefinestyle{mma}{
+    % backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+    % basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+    % breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    % breaklines=true,                 % sets automatic line breaking
+    % captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\itshape\color{green!60!black},    % comment style
+    % deletekeywords={...},            % if you want to delete keywords from the given language
+    escapeinside={`!}{!`)},          % if you want to add LaTeX within your code
+    % extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    % firstnumber=1000,                % start line enumeration with line 1000
+    frame=l,                           % adds a frame around the code
+    % keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\bfseries\color{blue},       % keyword style
+    language=Mathematica,                 % the language of the code
+    morekeywords={Echo,FileNameJoin,Log10},            % if you want to add more keywords to the set
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    % showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    % showstringspaces=false,          % underline spaces within strings only
+    % showtabs=false,                  % show tabs within strings adding particular underscores
+    % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{purple!40!black},     % string literal style
+    tabsize=2,                       % sets default tabsize to 2 spaces
+    % title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+    alsoother={@,_},                  % Page 46 of document, make these into other (= operator)
+}
+\lstdefinestyle{text}{
+    % backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+    % basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+    % breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    % breaklines=true,                 % sets automatic line breaking
+    % captionpos=b,                    % sets the caption-position to bottom
+    commentstyle=\itshape\color{green!60!black},    % comment style
+    % deletekeywords={...},            % if you want to delete keywords from the given language
+    escapeinside={`!}{!`)},          % if you want to add LaTeX within your code
+    % extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+    % firstnumber=1000,                % start line enumeration with line 1000
+    frame=l,                           % adds a frame around the code
+    % keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+    keywordstyle=\bfseries\color{blue},       % keyword style
+    language={},                                % the language of the code
+    % morekeywords={},            % if you want to add more keywords to the set
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+    % showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+    % showstringspaces=false,          % underline spaces within strings only
+    % showtabs=false,                  % show tabs within strings adding particular underscores
+    % stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+    stringstyle=\color{purple!40!black},     % string literal style
+    tabsize=2,                       % sets default tabsize to 2 spaces
+    % title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+    breaklines,                         % 自动换行
+}
+```
