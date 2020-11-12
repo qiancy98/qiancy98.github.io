@@ -135,7 +135,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
 \usepackage{url}
 
-% 从我导师的preamable template中传承的. % 我并不知道其效果。
+% 从我导师的preamable template中继承的. % 我并不知道其效果。
 % \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
 % \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
@@ -158,7 +158,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \usepackage[scheme=plain]{ctex} % 支持中文
 
 % % 定义在draft模式下的额外行为
-% % ref: https://tex.stackexchange.com/questions/21234/doing-something-only-when-the-draft-option-is-on
+% % 参考: https://tex.stackexchange.com/questions/21234/doing-something-only-when-the-draft-option-is-on
 % \makeatletter
 % \def\ifdraft{\ifdim\overfullrule>\z@
 %   \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
@@ -171,6 +171,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 % New commands
 \newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
+\newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
 
 % Environments
 \theoremstyle{plain}
