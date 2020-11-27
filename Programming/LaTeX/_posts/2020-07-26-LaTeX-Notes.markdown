@@ -207,6 +207,16 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
 \newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
 
+% % 编号
+% \numberwithin{equation}{section}
+% \numberwithin{figure}{section}
+% \numberwithin{table}{section}
+% % 让图片、表格、算法共享编号。
+% \makeatletter
+% \let\c@table\c@figure
+% \let\c@algorithm\c@figure
+% \makeatother
+
 % Environments
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
