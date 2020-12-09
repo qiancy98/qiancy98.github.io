@@ -1,0 +1,26 @@
+---
+layout: post
+title:  "正则表达式完备么？（网页链接集合）"
+---
+
+目录：
+
+- （此行不会显示）
+{:toc}
+
+直到我问出这个问题，我才意识到这背后是多少人的心血、以及这些心血凝成的结晶——《编译原理》。
+
+所以在此也不敢班门弄斧，只敢记录一些链接。
+
+- [正则表达式的真正威力（0）](https://blog.csdn.net/code_for_fun/article/details/83575009)
+- [正则表达式的真正威力（1）](https://blog.csdn.net/code_for_fun/article/details/83650269)
+- [正则表达式的真正威力（2）](https://blog.csdn.net/code_for_fun/article/details/83855772)
+- [正则表达式的真正威力（3）](https://blog.csdn.net/code_for_fun/article/details/104552293)
+
+考虑到正则表达式一定可以写成上下文有关语法，因此一定不是图灵完备的qwq
+另外正则表达式基本上只能使用后向断言，因此我不认为它可以表达所有上下文有关语法。（见如上链接的分析）
+
+这本书仍然存在大量机翻，不过内容确实不错，一并推荐qwq
+外，欢迎大家贡献翻译~
+
+- [解析技术](https://parsing-techniques.duguying.net/) 以及 [对应的GitHub仓库](https://github.com/duguying/parsing-techniques)
