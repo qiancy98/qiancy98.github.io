@@ -188,7 +188,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
-\usepackage[toc,pages]{appendix} % 支持附录
+\usepackage[toc,page]{appendix} % 支持附录
 % \usepackage[scheme=plain]{ctex} % 支持中文
 
 % % 定义在draft模式下的额外行为
