@@ -2,6 +2,7 @@
 	"section": [
 		"编程相关",
 		"学生身份相关",
+		"KeyboardPolitics",
 		"others",
 	],
 	"mapping": {
@@ -11,7 +12,8 @@
 	"alias": {
 		"Programming-others": "其他",
 		"Assistant": "助教工作",
-		"others": "其他",
 		"Papers": "论文相关",
+		"KeyboardPolitics": "键盘政治",
+		"others": "其他",
 	}
 }
