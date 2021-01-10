@@ -1,0 +1,7 @@
+---
+layout: page
+title: 友情链接
+permalink: /friends/
+---
+
+[知乎@咕鱼](pegionfish.GitHub.io)
