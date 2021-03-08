@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "下一代latex指南"
+---
+
+| | 上一代 | 现在主流版本 | 下一代 |
+| -- | -- | -- | -- |
+| TeX发行套装| | MiKTeX, TeXLive, MacTeX | |
+| TeX | PDFTeX | XeTeX | LuaTeX |
+| LaTeX | LaTeX 2.09 | LaTeX 2ε | LaTeX 3 |
+| LaTeX中文支持 | CTeX套装 (已弃用) | CTeX宏集 |
+| 引用 | LaTeX内嵌 | natbib | biblatex |
