@@ -10,6 +10,7 @@ title:  "下一代latex指南"
 | LaTeX | LaTeX 2.09 | LaTeX 2ε | LaTeX 3 |
 | LaTeX中文支持 | CJK, CTeX套装 (均已弃用) | CTeX宏集 |
 | 引用 | LaTeX内嵌 | natbib | biblatex |
+| 插入图片 | graphics宏集 | graphicx宏集 | |
 
 ## TeX
 
@@ -21,6 +22,10 @@ title:  "下一代latex指南"
 （其实我很希望快点放弃对前两个版本的支持……这样很多包的开发都可以直接使用Lua，于是会变得非常简单。）
 
 反正这些TeX开发速度都很慢就是了……
+
+PS：似乎有个叫做ConTeXt，基于LuaTeX的，不知道是什么，我有空该了解下。
+
+PPS：[知乎@李阿玲](https://www.zhihu.com/people/li-a-ling)似乎在写个新的TeX引擎，传送门[clerkma/ptex-ng](https://github.com/clerkma/ptex-ng)。
 
 ## LaTeX
 
