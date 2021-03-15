@@ -13,8 +13,8 @@ title:  "下一代latex指南"
 
 ## TeX
 
-- PDFTeX是最早的版本，现在已经停止新功能更新，仅作Bug修复。
-- XeTeX是现在的主流版本。
+- PDFTeX是最早的版本，貌似是后来支持的UTF-8，现在已经停止新功能更新，仅作Bug修复。
+- XeTeX是现在的主流版本，和LuaTeX一样原生支持UTF-8。
 - PDFTeX和XeTeX的底层都是plain TeX（是宏语言）。
 - LuaTeX是下一代TeX。
 相比于前两个TeX来说，LuaTeX底层变成了Lua，以及允许作者在文档中直接嵌入Lua代码；因此被认为选中为PDFTeX引擎的继任者。
@@ -42,6 +42,8 @@ title:  "下一代latex指南"
 包作者当时说，是因为当时MiKTeX和TeX Live都已经可以较好地支持中文了，所以他们就决定集中精力只维护CTeX宏集了。所以这些都是我后来在互联网上了解这段历史时看到的片段，不保证准确性……
 
 现在你只需在LaTeX中输入`\usepackage{ctex}`就可以使用中文啦，感谢他们w
+
+UPD：我刚刚看到了作者的[更新说明](https://zhuanlan.zhihu.com/p/137711348)。CTeX已经放弃了Ubuntu下对PDFTeX的支持。所以大家尽量不要使用PDFTeX，以防止遇到兼容性问题。
 
 ## 引用
 
