@@ -206,6 +206,9 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % New commands
 \newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
 \newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
+\newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}} % 用来在align*加入tag
+% Another possible approach
+% \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
 
 % % 编号
 % \numberwithin{equation}{section}

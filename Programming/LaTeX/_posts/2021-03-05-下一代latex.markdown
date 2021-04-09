@@ -37,7 +37,7 @@ PPS：[知乎@李阿玲](https://www.zhihu.com/people/li-a-ling)似乎在写个�
 
 最近终于已经将`\NewDocumentCommand`作为LaTeX的默认功能了……（确实挺好用的。）
 
-关于LaTeX3的中文教程，我有幸找到了这个知乎用户[stone-zeng](https://www.zhihu.com/people/stone-zeng-32/posts)。欢迎大家关注wwww（这个人好像也是CTeX宏集的维护者之一。）
+关于LaTeX3的中文教程，我有幸找到了这个知乎用户[stone-zeng](https://www.zhihu.com/people/stone-zeng-32/posts)和对应GitHub账号[stone-zeng](https://stone-zeng.github.io/)。欢迎大家关注wwww（这个人好像也是CTeX宏集的维护者之一。）
 
 ## CTeX
 
