@@ -42,6 +42,12 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 
 反正这个坑我也不知道怎么办……
 
+## 文档
+所有文档都可以在这里找到：[CTAN: Comprehensive TeX Archive Network](https://www.ctan.org)
+如果下载的是完整的TEX发行版，那么你应该可以在本地看到这些文档。在VS Code下，这需要将鼠标悬浮在需要的包上（例如，`\usepackage{cleveref}`中的`cleveref`），在弹出的提示框内点击`View Document`即可。
+
+已知例外是，`TiKZ`包的文档在`pgf`下。
+
 ## 引用
 
 - 可以使用宏包`cleveref`，调用命令为`\Cref`和`\cref`，可以自动填充引用对象（比如可以显示`Theorem 1.1`而非`1.1`）。
@@ -179,7 +185,11 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
 % \usepackage{graphicx}   % 支持插入图片
-% \usepackage{subcaption} % 支持子图
+% \usepackage{subcaption} % 支持子图，默认引用Figure 1a
+% 如果想让子图引用为Figure 1(a)
+% \usepackage[labelformat=simple]{subcaption}
+% \renewcommand\thesubfigure{(\alph{subfigure})}
+% \renewcommand\thesubtable{(\alph{subtable})}
 
 % Fonts
 % \usepackage{mathrsfs} % 花体 \mathscr
