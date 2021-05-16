@@ -43,6 +43,7 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 反正这个坑我也不知道怎么办……
 
 ## 文档
+
 所有文档都可以在这里找到：[CTAN: Comprehensive TeX Archive Network](https://www.ctan.org)
 如果下载的是完整的TEX发行版，那么你应该可以在本地看到这些文档。在VS Code下，这需要将鼠标悬浮在需要的包上（例如，`\usepackage{cleveref}`中的`cleveref`），在弹出的提示框内点击`View Document`即可。
 
@@ -165,20 +166,10 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 ```LaTeX
 \documentclass[a4paper,10pt]{article}
 % \pagestyle{plain} % 文档样式; empty则底部不放置页码.
+% \special{papersize=148mm,210mm} % A5 paper size. % 如果需要手动调整页面大小
 
 % Basic Packages
-\usepackage{amsmath,amsthm,amsfonts,amssymb,mathtools}
-
-% Label, Link
-\usepackage[colorlinks]{hyperref}
-\usepackage[capitalize]{cleveref}
-\usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
-\usepackage{url}
-
-% 从我导师的preamable template中继承的. % 我并不知道其效果。
-% \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
-% \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
-% \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
+\usepackage{amsmath,amsthm,amssymb,mathtools} % amssymb依赖amsfonts
 
 % Graph
 \usepackage{tikz}
@@ -196,6 +187,16 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \usepackage{bbm}      % 空心体 \mathbbm
 % \usepackage{dsfont}   % 空心体 \mathds
 
+% Change margin
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+
+% Label, Link
+\usepackage[colorlinks]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
+\usepackage{url}
+
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
 \usepackage[toc,page]{appendix} % 支持附录
@@ -212,13 +213,6 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 %
 % % 如果在草稿模式下，那么每节前分页，以节省打印纸张。
 % \ifdraft{\pretocmd{\section}{\clearpage}{}{}}{}
-
-% New commands
-\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
-\newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
-\newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}} % 用来在align*加入tag
-% Another possible approach
-% \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
 
 % % 编号
 % \numberwithin{equation}{section}
@@ -243,9 +237,17 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \newtheorem{conjecture}[theorem]{Conjecture}
 \crefname{conjecture}{conjecture}{conjectures} % 告诉cleveref如何引用conjecture环境
 
-% Change margin
-\usepackage{geometry}
-\geometry{a4paper,scale=0.8}
+% 从我导师的preamable template中继承的. % 我并不知道其效果。
+% \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+% \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
+% \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
+
+% New commands
+\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
+\newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
+\newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}} % 用来在align*加入tag
+% Another possible approach
+% \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
 
 \begin{document}
 
