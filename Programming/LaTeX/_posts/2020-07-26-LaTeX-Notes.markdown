@@ -49,6 +49,17 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 
 已知例外是，`TiKZ`包的文档在`pgf`下。
 
+## Shebang
+
+暂且记录于此。可以选择性使用。
+
+```LaTeX
+% !TEX encoding = UTF-8
+% !TEX program = latexmk
+% % !TEX root = somefile.tex
+% !BIB program = biber % or bibtex
+```
+
 ## 引用
 
 - 可以使用宏包`cleveref`，调用命令为`\Cref`和`\cref`，可以自动填充引用对象（比如可以显示`Theorem 1.1`而非`1.1`）。

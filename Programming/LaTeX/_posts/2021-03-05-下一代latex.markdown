@@ -50,6 +50,11 @@ PPS：[知乎@李阿玲](https://www.zhihu.com/people/li-a-ling)似乎在写个�
 
 UPD：我刚刚看到了作者的[更新说明](https://zhuanlan.zhihu.com/p/137711348)。CTeX已经放弃了Ubuntu下对PDFTeX的支持。所以大家尽量不要使用PDFTeX，以防止遇到兼容性问题。
 
+## BibLaTeX
+
+- [如何迁移到biblatex?](https://tex.stackexchange.com/questions/5091/what-to-do-to-switch-to-biblatex)
+- [使用biber的biblatex配置方式](https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations)
+
 ## 引用
 
 （待补充）
