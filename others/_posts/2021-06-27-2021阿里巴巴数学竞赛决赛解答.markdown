@@ -3,25 +3,26 @@ layout: post
 title:  "2021阿里巴巴数学竞赛决赛解答"
 # date:   2020-08-05 17:05:00 +0800
 ---
+#!https://www.zhihu.com/question/467903915/answer/1964679575
 
 主赛道应用副赛道代数。
 
 应用，第2，3题没有想出来。第4，5题我都有想法。
 
-第一题我做出来了不过没来得及说清楚. 记女生人数$n$男生人数$n+2$. 第一问答案$ \frac{n}{n+1} = \frac{20}{21} $. 第二问答案$ n(n+2) = 440 $.
+第一题我做出来了不过没来得及说清楚. 记女生人数$n$男生人数$n+2$. 第一问答案$\frac{n}{n+1} = \frac{20}{21}$. 第二问答案$n(n+2) = 440$.
 
 第四题第一问是Holder不等式，直接套一下就出来了；第二问就是概率的基本定义。取等需要直接构造对应的Y，同样第一问参考Holder不等式取等条件，第二问用定义构造。
 
 第五题稍微有点复杂，而且题目里的条件没有用到。对区域$Ω$，记$C(Ω)$是“满足任意两点距离为1的集合的最大元素个数”。
-对$ v \in \Omega $, 记$S(v)$是以$v$为圆心1为半径的球面(用来后续取交).
+对$v \in \Omega$, 记$S(v)$是以$v$为圆心1为半径的球面(用来后续取交).
 证明核心是
-**“引理：考虑区域$Ω$的子集$A$。若$A$中任意3点均有2点距离为1，则$ |A| \leq 2C(\Omega) $.”**
-证明方式是数学归纳法（废话）。那么我们假定我们已经对$ C(\Omega) \leq d $证明了, 我们来考虑$ C(\Omega) = d+1 $.
+**“引理：考虑区域$Ω$的子集$A$。若$A$中任意3点均有2点距离为1，则$|A| \leq 2C(\Omega)$.”**
+证明方式是数学归纳法（废话）。那么我们假定我们已经对$C(\Omega) \leq d$证明了, 我们来考虑$C(\Omega) = d+1$.
 
-- 如果$A$中任意两点距离都是1，则 $\|A\| \leq C(\Omega) $.
-- 如果$A$中存在两点距离不是1，假定这两个点是$ v_1, v_2 $。那么必然剩下所有点都位于
+- 如果$A$中任意两点距离都是1，则$\|A\| \leq C(\Omega)$.
+- 如果$A$中存在两点距离不是1，假定这两个点是$v_1, v_2$。那么必然剩下所有点都位于
 
-  $$ S(v_i) \cap \Omega, \quad i=1,2$$
+  $$S(v_i) \cap \Omega, \quad i=1,2$$
   
   之一里. 记
   
@@ -29,20 +30,20 @@ title:  "2021阿里巴巴数学竞赛决赛解答"
 
   显然$A_1 \setminus A_2$和$A_2 \setminus A_1$中任两点距离1.
   
-  - 若$A_1 \setminus A_2$和$A_2 \setminus A_1$均非空, 则$ \forall v \in A_1 \cap A_2 $, 或者$A_1 \setminus A_2 \subseteq S(v) $或者$A_2 \setminus A_1 \subseteq S(v)$, 否则取$u_1 \in A_1 \setminus A_2 \setminus S(v) $, $u_2 \in A_2 \setminus A_1 \setminus S(v) $, 则三元组$(v,u_1,u_2)$构成反例.
+  - 若$A_1 \setminus A_2$和$A_2 \setminus A_1$均非空, 则$\forall v \in A_1 \cap A_2$, 或者$A_1 \setminus A_2 \subseteq S(v)$或者$A_2 \setminus A_1 \subseteq S(v)$, 否则取$u_1 \in A_1 \setminus A_2 \setminus S(v)$,$u_2 \in A_2 \setminus A_1 \setminus S(v)$, 则三元组$(v,u_1,u_2)$构成反例.
 
-    取$ B_1 = \{ v \in A_1 \cap A_2 : A_1 \setminus A_2 \subseteq S(v) \} $, $ B_2 = \{ v \in A_2 \cap A_1 : A_2 \setminus A_1 \subseteq S(v) \} $, 则$ (A_1 \setminus A_2) \cup B_1 \cup \{v_1\} $和$ (A_2 \setminus A_1) \cup B_2 \cup \{v_2\} $中任两点距离1.
-	总点数$ |A| \leq 2 C(\Omega) $.
+    取$B_1 = \{ v \in A_1 \cap A_2 : A_1 \setminus A_2 \subseteq S(v) \}$,$B_2 = \{ v \in A_2 \cap A_1 : A_2 \setminus A_1 \subseteq S(v) \}$, 则$(A_1 \setminus A_2) \cup B_1 \cup \{v_1\}$和$(A_2 \setminus A_1) \cup B_2 \cup \{v_2\}$中任两点距离1.
+	总点数$|A| \leq 2 C(\Omega)$.
 	*其实这段配图后是显然的, 不过当时时间紧张来不及写了... 希望别为此扣分. 除此之外的地方应该都写清楚了.*
 
-  - 若$A_1 \setminus A_2$和$A_2 \setminus A_1$有至少一个非空, 不妨假定$ A_2 \subseteq A_1 $.
-    则$ A \subseteq \{ v_1,v_2 \} \subseteq S(v_1) $.
-	只需证明$ S(v_1) \cap \Omega $上不多于$2(C(\Omega)-1)$个点即可.
+  - 若$A_1 \setminus A_2$和$A_2 \setminus A_1$有至少一个非空, 不妨假定$A_2 \subseteq A_1$.
+    则$A \subseteq \{ v_1,v_2 \} \subseteq S(v_1)$.
+	只需证明$S(v_1) \cap \Omega$上不多于$2(C(\Omega)-1)$个点即可.
 
-	由于$ S(v_1) \cap \Omega $上的点到$ v_1 $的距离都是1, 因此$ C(S(v_1) \cap \Omega) \leq C(\Omega) - 1$.
+	由于$S(v_1) \cap \Omega$上的点到$v_1$的距离都是1, 因此$C(S(v_1) \cap \Omega) \leq C(\Omega) - 1$.
 	由归纳假设知证毕.
 
-回到原题. 显然$ C(\mathbb{R}^d) = d+1 $, 因此证毕. *(啥你说题目里这些点还要在某个奇奇怪怪的区域里? 风太大我没有听清.)*
+回到原题. 显然$C(\mathbb{R}^d) = d+1$, 因此证毕. *(啥你说题目里这些点还要在某个奇奇怪怪的区域里? 风太大我没有听清.)*
 
 代数做了17题, 19题做了一半. 然而因为我的愚蠢, 第19题忘了提交答案o(TヘTo). (不过刚刚看了眼大家的做法, 好像19题我就用对了伽罗瓦扩张后面都不太对.)
 
