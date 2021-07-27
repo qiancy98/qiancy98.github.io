@@ -8,7 +8,7 @@ title:  "下一代latex指南"
 | TeX发行套装| | MiKTeX, TeXLive, MacTeX | |
 | TeX | PDFTeX | XeTeX | LuaTeX |
 | LaTeX | LaTeX 2.09 | LaTeX 2ε | LaTeX 3 |
-| LaTeX中文支持 | CJK, CTeX套装 (均已弃用) | CTeX宏集 |
+| LaTeX中文支持 | CJK, CTeX套装 (已弃用) | CTeX宏集 |
 | 引用 | LaTeX内嵌 | natbib | biblatex |
 | 插入图片 | graphics宏集 | graphicx宏集 | |
 
@@ -41,7 +41,8 @@ PPS：[知乎@李阿玲](https://www.zhihu.com/people/li-a-ling)似乎在写个�
 
 ## CTeX
 
-最早社区用的是CJK宏集。后来这群人写了CTeX宏集和CTeX套装（据作者讲，是因为当时CTeX宏集的配置过于复杂，所以他们就写了个套装，在套装里预配置好了）。
+最早社区用的是CJK宏集，不过比较难以配置。后来这群人基于CJK宏集写了CTeX宏集，使用CTeX宏集可以极大简化配置。
+据作者讲，因为当时CTeX宏集的配置过于复杂，所以他们又写了CTeX套装，在套装里预配置好了相关参数（主要是字符集编码问题）。
 
 最后一版CTeX套装（应该是2012年）也早在我接触LaTeX前就停止维护了。
 包作者当时说，是因为当时MiKTeX和TeX Live都已经可以较好地支持中文了，所以他们就决定集中精力只维护CTeX宏集了。所以这些都是我后来在互联网上了解这段历史时看到的片段，不保证准确性……
