@@ -193,6 +193,9 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \renewcommand\thesubfigure{(\alph{subfigure})}
 % \renewcommand\thesubtable{(\alph{subtable})}
 
+% 重定义enumerate编号
+% \renewcommand{\labelenumi}{(\arabic{enumi}).}
+
 % Fonts
 % \usepackage{mathrsfs} % 花体 \mathscr
 % \usepackage{bbm}      % 空心体 \mathbbm
@@ -203,6 +206,8 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \geometry{a4paper,scale=0.8}
 
 % Label, Link
+\usepackage[style=authoryear,sorting=none]{biblatex}
+% \addbibresource{./put/bib/file/here.bib}
 \usepackage[colorlinks]{hyperref}
 \usepackage[capitalize]{cleveref}
 \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
