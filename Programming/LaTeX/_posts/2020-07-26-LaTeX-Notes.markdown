@@ -176,11 +176,18 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 ```LaTeX
 \documentclass[a4paper,10pt]{article}
+\usepackage{amsmath,amsthm,amssymb,mathtools} % Basic Packages % amssymb依赖amsfonts
+
+% Fonts
+% \usepackage{mathrsfs} % 花体 \mathscr
+% \usepackage{bbm}      % 空心体 \mathbbm
+% \usepackage{dsfont}   % 空心体 \mathds
+
+% Change margin
 % \pagestyle{plain} % 文档样式; empty则底部不放置页码.
 % \special{papersize=148mm,210mm} % A5 paper size. % 如果需要手动调整页面大小
-
-% Basic Packages
-\usepackage{amsmath,amsthm,amssymb,mathtools} % amssymb依赖amsfonts
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
 
 % Graph
 \usepackage{tikz}
@@ -192,18 +199,6 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \usepackage[labelformat=simple]{subcaption}
 % \renewcommand\thesubfigure{(\alph{subfigure})}
 % \renewcommand\thesubtable{(\alph{subtable})}
-
-% 重定义enumerate编号
-% \renewcommand{\labelenumi}{(\arabic{enumi}).}
-
-% Fonts
-% \usepackage{mathrsfs} % 花体 \mathscr
-% \usepackage{bbm}      % 空心体 \mathbbm
-% \usepackage{dsfont}   % 空心体 \mathds
-
-% Change margin
-\usepackage{geometry}
-\geometry{a4paper,scale=0.8}
 
 % Label, Link
 \usepackage[style=authoryear,sorting=none]{biblatex}
@@ -234,6 +229,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \numberwithin{equation}{section}
 % \numberwithin{figure}{section}
 % \numberwithin{table}{section}
+% \renewcommand{\labelenumi}{(\arabic{enumi}).}
 % % 让图片、表格、算法共享编号。
 % \makeatletter
 % \let\c@table\c@figure
@@ -254,13 +250,13 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \crefname{conjecture}{conjecture}{conjectures} % 告诉cleveref如何引用conjecture环境
 
 % 从我导师的preamable template中继承的. % 我并不知道其效果。
-% \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
 % \newcommand{\doi}[1]{\textsc{doi}: \href{http://dx.doi.org/#1}{\nolinkurl{#1}}}
 
 % New commands
-\newcommand{\eqgap}{\;\phantom{=}\;} % 在align环境中对齐使用 % 等于一个等号的间距
+\newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 \newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
+\newcommand{\eqgap}{\mathrel{\phantom{=}}} % 在align环境中对齐使用 % 等于一个等号的间距
 \newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}} % 用来在align*加入tag
 % Another possible approach
 % \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
