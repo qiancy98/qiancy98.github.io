@@ -195,6 +195,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \theoremstyle{ModifiedRemark}
 \newtheorem{case}{Case}[theorem]
 \renewcommand{\thecase}{\arabic{case}}
+\crefname{case}{Case}{Cases} % 告诉cleveref如何引用case环境
 ```
 
 ## 我的导言区代码
@@ -288,6 +289,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \theoremstyle{ModifiedRemark}
 \newtheorem{case}{Case}[theorem]
 \renewcommand{\thecase}{\arabic{case}}
+\crefname{case}{Case}{Cases} % 告诉cleveref如何引用case环境
 
 % 从我导师的preamable template中继承的. % 我并不知道其效果。
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
