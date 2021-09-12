@@ -170,6 +170,33 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 在选择合适字体时, 如下图片可供参考:
 ![字体选择参考](/assets/img/LaTeX/fonts choosing.png "字体选择参考")
 
+## 证明中分情况讨论
+
+证明中分情况讨论，可能还需要引用，但是似乎`amsthm`却缺少相应环境……怎么办？
+——自己动手丰衣足食嘛~
+
+这是(默认环境的参数)[https://tex.stackexchange.com/questions/17551/amsthm-what-are-the-newtheoremstyle-parameters-for-the-default-styles]。
+
+仿照之，可以魔改出Case的参数，如以下代码。
+随后使用`\renewcommand{\thecase}{\arabic{case}}`修改默认显示（引用）方法。
+
+我的最终代码如下：
+```LaTeX
+% Case in proof
+\newtheoremstyle{ModifiedRemark}
+	{0.5\topsep}             % ABOVE SPACE
+	{0.5\topsep}             % BELOW SPACE
+	{\normalfont}            % BODY FONT
+	{0pt}                    % INDENT (empty value is the same as 0pt)
+	{\scshape}               % HEAD FONT % Different from Environment"remark"
+	{.}                      % HEAD PUNCT
+	{5pt plus 1pt minus 1pt} % HEAD SPACE
+	{}                       % CUSTOM-HEAD-SPEC
+\theoremstyle{ModifiedRemark}
+\newtheorem{case}{Case}[theorem]
+\renewcommand{\thecase}{\arabic{case}}
+```
+
 ## 我的导言区代码
 
 附上我的导言区文件：
@@ -248,6 +275,19 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \crefname{conjecture}{conjecture}{conjectures} % 告诉cleveref如何引用conjecture环境
+% Case in proof
+\newtheoremstyle{ModifiedRemark}
+	{0.5\topsep}             % ABOVE SPACE
+	{0.5\topsep}             % BELOW SPACE
+	{\normalfont}            % BODY FONT
+	{0pt}                    % INDENT (empty value is the same as 0pt)
+	{\scshape}               % HEAD FONT % Different from Environment"remark"
+	{.}                      % HEAD PUNCT
+	{5pt plus 1pt minus 1pt} % HEAD SPACE
+	{}                       % CUSTOM-HEAD-SPEC
+\theoremstyle{ModifiedRemark}
+\newtheorem{case}{Case}[theorem]
+\renewcommand{\thecase}{\arabic{case}}
 
 % 从我导师的preamable template中继承的. % 我并不知道其效果。
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
