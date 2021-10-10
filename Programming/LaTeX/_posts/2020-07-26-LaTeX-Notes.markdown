@@ -238,14 +238,14 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 ```LaTeX
 % Case in proof
 \newtheoremstyle{ModifiedRemark}
-	{0.5\topsep}             % ABOVE SPACE
-	{0.5\topsep}             % BELOW SPACE
-	{\normalfont}            % BODY FONT
-	{0pt}                    % INDENT (empty value is the same as 0pt)
-	{\scshape}               % HEAD FONT % Different from Environment"remark"
-	{.}                      % HEAD PUNCT
-	{5pt plus 1pt minus 1pt} % HEAD SPACE
-	{}                       % CUSTOM-HEAD-SPEC
+    {0.5\topsep}             % ABOVE SPACE
+    {0.5\topsep}             % BELOW SPACE
+    {\normalfont}            % BODY FONT
+    {0pt}                    % INDENT (empty value is the same as 0pt)
+    {\scshape}               % HEAD FONT % Different from Environment"remark"
+    {.}                      % HEAD PUNCT
+    {5pt plus 1pt minus 1pt} % HEAD SPACE
+    {}                       % CUSTOM-HEAD-SPEC
 \theoremstyle{ModifiedRemark}
 \newtheorem{case}{Case}[theorem]
 \renewcommand{\thecase}{\arabic{case}}
@@ -287,10 +287,10 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \addbibresource{./put/bib/file/here.bib}
 \ExecuteBibliographyOptions
 {
-	maxcitenames=3, maxbibnames=100, minnames=3,
+    maxcitenames=3, maxbibnames=100, minnames=3,
 }
 \AtEveryBibitem{
-	\clearfield{issn}
+    \clearfield{issn}
 }
 \usepackage[colorlinks]{hyperref}
 \usepackage[capitalize]{cleveref}
@@ -304,12 +304,12 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 \makeatletter
 \def\ifdraft{\ifdim\overfullrule>\z@ % 定义在draft模式下的额外行为
-	\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+    \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
 \makeatother
 % \ifdraft{\pretocmd{\section}{\clearpage}{}{\GenericWarning{Error when prepending to command \backslash section}}}{} % 如果在草稿模式下，那么每节前分页，以节省打印纸张。
 \newcommand{\ProofStyle}[2][\square]{
-	\cspreto{#2}{\pushQED{\qed}\renewcommand{\qedsymbol}{\ensuremath{#1}}}
-	\cspreto{end#2}{\popQED}
+    \cspreto{#2}{\pushQED{\qed}\renewcommand{\qedsymbol}{\ensuremath{#1}}}
+    \cspreto{end#2}{\popQED}
 }
 
 % % 编号
@@ -325,14 +325,14 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 % Environments
 \newtheoremstyle{ModifiedRemark}
-	{0.5\topsep}	% ABOVE SPACE
-	{0.5\topsep}	% BELOW SPACE
-	{\normalfont}	% BODY FONT
-	{0pt}			% INDENT (empty value is the same as 0pt)
-	{\scshape}	% HEAD FONT % Different from Environment"remark"
-	{.}			% HEAD PUNCT
-	{5pt plus 1pt minus 1pt} % HEAD SPACE
-	{}			% CUSTOM-HEAD-SPEC
+    {0.5\topsep}             % ABOVE SPACE
+    {0.5\topsep}             % BELOW SPACE
+    {\normalfont}            % BODY FONT
+    {0pt}                    % INDENT (empty value is the same as 0pt)
+    {\scshape}               % HEAD FONT % Different from Environment{remark}
+    {.}                      % HEAD PUNCT
+    {5pt plus 1pt minus 1pt} % HEAD SPACE
+    {}                       % CUSTOM-HEAD-SPEC
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
