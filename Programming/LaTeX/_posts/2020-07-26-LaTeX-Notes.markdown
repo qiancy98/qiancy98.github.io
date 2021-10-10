@@ -78,6 +78,26 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 - 这条没有考证：据说`hyperref`要在`cleveref`前导入。
 - 我们使用`~`来输出不能断行的空格。一般引用中的页码“p. 123”或者“引理 1.1”中间的空格不断行，因此建议使用命令`p.~123`和`引理~1.1`。
 
+### biblatex
+
+- `biblatex`包下常用的引用格式参见[这里](https://www.overleaf.com/learn/latex/Biblatex_citation_styles).
+
+### 子图、子表格
+
+我们使用如下命令以引用子图：（默认引用`Figure 1a`）
+
+```LaTeX
+\usepackage{subcaption}
+```
+
+如果我们想让子图引用为`Figure 1(a)`，则应采取以下写法：
+
+```LaTeX
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\renewcommand\thesubtable{(\alph{subtable})}
+```
+
 ## 中文显示
 
 - 选项`scheme=plain`用来在支持中文的同时不改变文档原格式（比如显示“Section”而非“节”，首页显示英文日期而非中文日期，等等）。用法：
@@ -90,6 +110,23 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 
 - 选项`final`和`draft`用来控制是在草稿模式还是终稿模式。草稿模式下，如果某一行过长会有黑框。
 - 如上所述，`final`模式下宏包`showkeys`自动被禁用。
+
+### 定义草稿模式下的额外行为
+
+草稿模式较其他模式唯一的区别为：草稿模式下`\overfullrule`大于0（作用是，在行末溢出处加个黑框提示溢出）。
+因此可以通过检测`\overfullrule`的值判断是否在草稿模式。
+
+[参考网页。](https://tex.stackexchange.com/questions/21234/doing-something-only-when-the-draft-option-is-on)
+
+```LaTeX
+% 定义在draft模式下的额外行为
+\makeatletter
+\def\ifdraft{\ifdim\overfullrule>\z@
+  \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+\makeatother
+% 如果在草稿模式下，那么每节前分页，以节省打印纸张。
+\ifdraft{\pretocmd{\section}{\clearpage}{}{}}{}
+```
 
 ## 文档样式
 
@@ -119,6 +156,23 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
   ```
 
 - 当时寻找下面一种不使用宏包的方法，是因为机械硬盘下宏包`geometry`导入似乎很慢。固态硬盘下看起来问题不大。（别问我为什么编译依然这么慢，我不知道。）
+
+## 数学公式
+
+### 字符间距
+
+- 建议使用`\lvert`和`\rvert`作为左右`|`符号，以保证正确间距。
+- `\bigl`, `\bigm`, `\bigr`, `\big`效果几乎一样，但是其作用后的符号类型分别为`\mathopen`, `\mathrel`, `\mathclose`, `\mathord`.
+- 十分不幸， $\TeX$ 中可以正确处理双目运算符和左结合单目运算符，但是无法正常处理右结合单目运算符（思考：`n! r!`）。这是 $\TeX$ 的锅，我们为了正常显示，只能在`!`后加上 $\frac{3}{18}$ em 的空格，即`\,`。
+
+### 手动标号
+
+经常遇见的情况是，一长串公式只有一个想要标号，因此不想每行加个`\nonumber`。能不能造个相反功能的`\numberthis`? (比如说，用来在`align*`环境中加入tag)
+以下给出两种方案：（我的导言区采用了第一种）
+
+- `\newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}}`
+- `\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}`
+
 
 ## 字体选择
 
@@ -205,6 +259,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 ```LaTeX
 \documentclass[a4paper,10pt]{article}
 \usepackage{amsmath,amsthm,amssymb,mathtools} % Basic Packages % amssymb依赖amsfonts
+\usepackage{regexpatch} % 替代etoolbox提供各种钩子。本导言区中用到的是\pretocmd。
 
 % Fonts
 % \usepackage{mathrsfs} % 花体 \mathscr
@@ -222,15 +277,21 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \usetikzlibrary{calc}
 \usetikzlibrary{positioning}
 % \usepackage{graphicx}   % 支持插入图片
-% \usepackage{subcaption} % 支持子图，默认引用Figure 1a
-% 如果想让子图引用为Figure 1(a)
-% \usepackage[labelformat=simple]{subcaption}
-% \renewcommand\thesubfigure{(\alph{subfigure})}
-% \renewcommand\thesubtable{(\alph{subtable})}
+% 支持子图，引用为Figure 1(a)
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+\renewcommand\thesubtable{(\alph{subtable})}
 
 % Label, Link
-\usepackage[style=authoryear,sorting=none]{biblatex}
+\usepackage[style=alphabetic,sorting=none,isbn=false]{biblatex} % numeric, authoryear.
 % \addbibresource{./put/bib/file/here.bib}
+\ExecuteBibliographyOptions
+{
+	maxcitenames=3, maxbibnames=100, minnames=3,
+}
+\AtEveryBibitem{%
+  \clearfield{issn}%
+}
 \usepackage[colorlinks]{hyperref}
 \usepackage[capitalize]{cleveref}
 \usepackage[notref,notcite]{showkeys} % 文档格式为final时自动禁用
@@ -238,20 +299,18 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 
 % Other packages
 % \usepackage{ifthen} % 支持条件判断
-\usepackage[toc,page]{appendix} % 支持附录
+% \usepackage[toc,page]{appendix} % 支持附录
 % \usepackage[scheme=plain]{ctex} % 支持中文
 
-% % 定义在draft模式下的额外行为
-% % 参考: https://tex.stackexchange.com/questions/21234/doing-something-only-when-the-draft-option-is-on
-% \makeatletter
-% \def\ifdraft{\ifdim\overfullrule>\z@
-%   \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
-% \makeatother
-%
-% \usepackage{etoolbox} % 提供各种钩子。本导言区中用到的是\pretocmd。
-%
-% % 如果在草稿模式下，那么每节前分页，以节省打印纸张。
-% \ifdraft{\pretocmd{\section}{\clearpage}{}{}}{}
+\makeatletter
+\def\ifdraft{\ifdim\overfullrule>\z@ % 定义在draft模式下的额外行为
+  \expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+\makeatother
+% \ifdraft{\pretocmd{\section}{\clearpage}{}{\GenericWarning{Error when prepending to command \backslash section}}}{} % 如果在草稿模式下，那么每节前分页，以节省打印纸张。
+\newcommand{\ProofStyle}[2][\square]{
+	\cspreto{#2}{\pushQED{\qed}\renewcommand{\qedsymbol}{\ensuremath{#1}}}
+	\cspreto{end#2}{\popQED}
+}
 
 % % 编号
 % \numberwithin{equation}{section}
@@ -265,31 +324,38 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 % \makeatother
 
 % Environments
+\newtheoremstyle{ModifiedRemark}
+  {0.5\topsep}	% ABOVE SPACE
+  {0.5\topsep}	% BELOW SPACE
+  {\normalfont}	% BODY FONT
+  {0pt}			% INDENT (empty value is the same as 0pt)
+  {\scshape}	% HEAD FONT % Different from Environment"remark"
+  {.}			% HEAD PUNCT
+  {5pt plus 1pt minus 1pt} % HEAD SPACE
+  {}			% CUSTOM-HEAD-SPEC
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
 \theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
 \newtheorem{remark}[theorem]{Remark}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\crefname{conjecture}{conjecture}{conjectures} % 告诉cleveref如何引用conjecture环境
-% Case in proof
-\newtheoremstyle{ModifiedRemark}
-	{0.5\topsep}             % ABOVE SPACE
-	{0.5\topsep}             % BELOW SPACE
-	{\normalfont}            % BODY FONT
-	{0pt}                    % INDENT (empty value is the same as 0pt)
-	{\scshape}               % HEAD FONT % Different from Environment"remark"
-	{.}                      % HEAD PUNCT
-	{5pt plus 1pt minus 1pt} % HEAD SPACE
-	{}                       % CUSTOM-HEAD-SPEC
+\ProofStyle[\Diamond]{example}
+\ProofStyle[\Diamond]{remark}
 \theoremstyle{ModifiedRemark}
 \newtheorem{case}{Case}[theorem]
+\newtheorem{claim}[case]{Claim}
+% 告诉cleveref如何引用环境
 \renewcommand{\thecase}{\arabic{case}}
-\crefname{case}{Case}{Cases} % 告诉cleveref如何引用case环境
+\crefname{conjecture}{Conjecture}{Conjectures}
+\crefname{example}{Example}{Examples}
+\crefname{case}{Case}{Cases}
+\crefname{claim}{Claim}{Claims}
 
 % 从我导师的preamable template中继承的. % 我并不知道其效果。
 % \newcommand{\OEIS}[1]{\href{http://oeis.org/#1}{\nolinkurl{#1}}}
@@ -300,8 +366,6 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \newcommand{\keywords}{\par\bigskip\noindent\textbf{Keywords: }} % 用来在摘要里加上keywords
 \newcommand{\eqgap}{\mathrel{\phantom{=}}} % 在align环境中对齐使用 % 等于一个等号的间距
 \newcommand{\numberthis}{\refstepcounter{equation}\tag{\theequation}} % 用来在align*加入tag
-% Another possible approach
-% \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
 
 \begin{document}
 
