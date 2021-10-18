@@ -98,6 +98,31 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 \renewcommand\thesubtable{(\alph{subtable})}
 ```
 
+### 改变enumerate的枚举格式
+
+```LaTeX
+\renewcommand{\labelenumi}{(\arabic{enumi}).}
+```
+
+### 编号
+
+在节内编号
+
+```LaTeX
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+```
+
+让图片、表格和算法共享编号。
+
+```LaTeX
+\makeatletter
+\let\c@table\c@figure
+\let\c@algorithm\c@figure
+\makeatother
+```
+
 ## 中文显示
 
 - 选项`scheme=plain`用来在支持中文的同时不改变文档原格式（比如显示“Section”而非“节”，首页显示英文日期而非中文日期，等等）。用法：
@@ -128,12 +153,19 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 \ifdraft{\pretocmd{\section}{\clearpage}{}{}}{}
 ```
 
+如果写包的话，问题简单得多：draft将会作为选项传递给包。因此直接检测选项即可。
+
 ## 文档样式
 
 - 如下命令可以禁用底部页码。
 
   ```LaTeX
   \pagestyle{plain}
+  ```
+- 如下命令以手动调整页面大小。
+
+  ```LaTeX
+  \special{papersize=148mm,210mm} % A5 paper size.
   ```
 
 ### 改变页边距
@@ -252,7 +284,7 @@ LaTeX字体分为三个维度: family, shape, series. 通常而言, 同一个维
 \crefname{case}{Case}{Cases} % 告诉cleveref如何引用case环境
 ```
 
-## 我的导言区代码
+## 我的导言区代码（已弃用）
 
 附上我的导言区文件：
 
