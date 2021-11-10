@@ -60,6 +60,66 @@ TeX对大括号做了特别处理，使其可以嵌套；但是LaTeX并没有对
 % !BIB program = biber % or bibtex
 ```
 
+## 常用宏包（转载）
+
+转载自：[孟晨的知乎回答](https://www.zhihu.com/question/26421957/answer/32801779)
+
+> 常见的宏包推荐。
+> 
+> 首先是国外用户写的一篇文档。（链接已失效。）
+> 
+> 有翻译：(原始链接已失效，此处为两个存档)
+> 
+> - [推荐每个 LaTeX 用户使用的 9 个宏包](https://www.latexstudio.net/archives/2179.html)
+> - [推荐每个 LaTeX 用户使用的 9 个宏包](https://www.geek-share.com/detail/2664771141.html)
+> 
+> 接下来……
+> 
+> 中文支持。
+> - ctex - 封装好的中文支持和版式调整工具，定义了许多方便的工具
+> - xeCJK - XeLaTeX 下的中文字体选择和禁则、压缩的处理
+> - fontspec - XeLaTeX 下的西文字体选择
+> 
+> 页面布局类。
+> 
+> - geometry - 调整页面大小、页边距等尺寸
+> - fancyhdr - 设计页眉页脚
+> - titlesec - 设计章节标题格式
+> - titletoc - 设计目录格式
+> 
+> 超链接和 PDF 的各种功能。
+> 
+> - hyperref - 超链接，PDF 书签，PDF 表单，PDF 元信息……
+> - media9 - 插入 Flash、视频等
+> 
+> 图表和浮动体。
+> 
+> - graphicx - 插图
+> - xcolor - 颜色
+> - tikz - 绘图
+> - booktabs - 三线表
+> - multirow - 列合并单元格（cell）
+> - makecell - 在单元格内手动换行
+> - longtable - 换页表格
+> - tabu - 封装了各种接口的表格宏包，制表强烈推荐
+> - threeparttable - 在表格中使用脚标，和 tabu 有冲突。
+> - diagbox - 斜线表头（作者：知乎@刘海洋）
+> - float - 提供了 H 选项，禁止浮动体浮动（除非必要，不建议这么干）
+> - placeins - 提供了`\FloatBarrier`命令，限制浮动体浮动范围
+> 
+> 列表环境。
+> 
+> - enumitem - 修改列表环境的各种间距、label 样式等的不二法门
+> 
+> 其他一些工具。
+> 
+> - nag - 检查你是否使用了过时的宏包和命令的宏包
+> - etoolbox - 主要是针对宏包和文档类开发者，不过提供了一些对环境的钩子，有时候很有用
+> - xpatch - 修补命令用的
+> - environ - 增强了 LaTeX 本来的`\newenvironment`的功能，解决了一些花括号不匹配导致的问题
+> 
+> 暂时想到这么些，回头再补充吧……
+
 ## 引用
 
 - 可以使用宏包`cleveref`，调用命令为`\Cref`和`\cref`，可以自动填充引用对象（比如可以显示`Theorem 1.1`而非`1.1`）。
