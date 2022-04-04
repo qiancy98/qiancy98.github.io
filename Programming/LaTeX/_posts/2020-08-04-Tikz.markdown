@@ -8,7 +8,7 @@ title:  "TiKZ代码示例"
 - （此行不会显示）
 {:toc}
 
-这是我很喜欢的LaTeX代码例子:
+## Foreach例子演示
 
 ```LaTeX
 \begin{tikzpicture}[scale=4]
@@ -37,5 +37,17 @@ title:  "TiKZ代码示例"
     \foreach \x in {000,011,101,110,positive}
         \path[fill]
             (\x) circle (1pt);
+\end{tikzpicture}
+```
+
+## 箭头放到直线中间
+
+```LaTeX
+\usetikzlibrary{decorations.markings}
+\tikzset{
+  arrowmark/.style 2 args={postaction={decorate},decoration={markings,mark=at position #1 with \arrow{#2}}}
+}
+\begin{tikzpicture}
+\path[draw,arrowmark={.5}{>}] (0,0) -- (0,1);
 \end{tikzpicture}
 ```
