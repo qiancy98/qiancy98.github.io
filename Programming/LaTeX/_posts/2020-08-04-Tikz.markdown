@@ -51,3 +51,14 @@ title:  "TiKZ代码示例"
 \path[draw,arrowmark={.5}{>}] (0,0) -- (0,1);
 \end{tikzpicture}
 ```
+
+## 展开TeX命令
+
+```LaTeX
+\begin{tikzpicture}
+\path[style/.expanded={draw,color=red},label/.expanded={90:$x$}] (0,0);
+\end{tikzpicture}
+```
+
+## 箭头
+建议使用`\usetikzlibrary{arrows.meta}`。
