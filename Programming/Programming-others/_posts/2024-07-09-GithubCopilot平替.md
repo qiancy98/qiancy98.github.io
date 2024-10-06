@@ -24,3 +24,8 @@ Github Copilot 有点贵, 而且商业化使用更贵, 所以找了一些替代�
 | [Genie](https://github.com/ai-genie/chatgpt-vscode) | 免费 | 取决于Token | 否, 需要自行提供 | 假装开源, 其实没开源 |
 | [codeium](https://codeium.com/) | $12/月 | GPT-4 | 是 | 提供0元永久试用版, GPT-3.5能力 |
 | [CodeGeeX by质谱](https://codegeex.cn/) | 免费 | GPT-4 | 是 | 开源, 可本地部署 [飞书文档](https://zhipu-ai.feishu.cn/wiki/CuvxwUDDqiErQUkFO2Tc4walnZY) |
+
+## 上文写完后新发现的替代品
+
+- continue.continue: free
+- fittentech.fitten-code: free
