@@ -29,3 +29,7 @@ Github Copilot 有点贵, 而且商业化使用更贵, 所以找了一些替代�
 
 - continue.continue: free
 - fittentech.fitten-code: free
+
+## Continue试用体验
+
+有bug: 敲回车后需要等Continue响应. 如果Continue正在生成代码, 会直接卡死, 等Continue生成完了才响应回车 (然后刚才生成的内容会被直接抛弃, 显然).
