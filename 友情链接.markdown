@@ -4,5 +4,11 @@ title: 友情链接
 permalink: /friends/
 ---
 
-- [知乎@咕鱼](https://pegionfish.GitHub.io)
+- [叶小枫](https://maplef.top/)
 - [Menci](https://blog.men.ci/)
+- [山前](https://estela.moe/)
+- [光量子](https://lightquantum.me/)
+- [綾香](https://ayaka.shn.hk/)
+- [凌莞](https://nyac.at/)
+- [memset0](https://mem.ac/)
+- [咕鱼](https://pegionfish.GitHub.io)
